@@ -20,7 +20,7 @@ exports.uploadVideo = async (req,res)=>{
 exports.getAllVideo = async(req,res)=>{
     try{
         const videos = await Video.find().populate('user','channelName profilePic userName createdAt');
-         // please watch the video for the code
+        
         res.status(201).json({ sucess: "true", "videos": videos });
     }catch (error){
         res.status(500).json({ error: 'Server error' });

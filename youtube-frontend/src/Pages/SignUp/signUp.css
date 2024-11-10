@@ -1,16 +1,18 @@
-.signUp{
+/* SignUp page container */
+.signUp {
     margin-top: 56px;
     color: white;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
     height: 100vh;
     background-color: black;
     color: white;
 }
-.signup_card{
+
+/* SignUp card */
+.signup_card {
     width: 40%;
     border: 1px solid;
     padding: 15px 25px;
@@ -20,9 +22,10 @@
     align-items: center;
     justify-content: center;
     box-shadow: 0.5px 0.5px 8px white;
-
 }
-.signUp_title{
+
+/* Title of the SignUp */
+.signUp_title {
     display: flex;
     gap: 20px;
     width: 100%;
@@ -36,8 +39,8 @@
     font-style: normal;
 }
 
-
-.signUp_Inputs{
+/* Input fields section */
+.signUp_Inputs {
     gap: 20px;
     width: 100%;
     display: flex;
@@ -46,7 +49,9 @@
     flex-direction: column;
     margin-top: 30px;
 }
-.signUp_Inputs_inp{
+
+/* Individual input fields */
+.signUp_Inputs_inp {
     width: 60%;
     height: 45px;
     color: white;
@@ -54,31 +59,38 @@
     border: none;
     border-radius: 5px;
     background-color: #222222;
-
 }
 
-.image_upload_signup{
+/* Image upload section */
+.image_upload_signup {
     display: flex;
     gap: 30px;
 }
-.image_upload_signup_div{
+
+/* Image upload container */
+.image_upload_signup_div {
     width: 100px;
     height: 100px;
 }
-.image_default_signUp{
+
+/* Default profile image for signup */
+.image_default_signUp {
     width: 100%;
     height: 100%;
     border-radius: 50%;
 }
 
-.signUpBtns{
+/* SignUp buttons section */
+.signUpBtns {
     width: 100%;
     display: flex;
     align-items: center;
     gap: 30px;
     justify-content: center;
 }
-.signUpBtn{
+
+/* Individual SignUp button */
+.signUpBtn {
     padding: 10px;
     font-size: 18px;
     font-weight: 500;
@@ -87,8 +99,96 @@
     cursor: pointer;
     color: white;
     text-decoration: none;
-    &:hover{
-        background-color: white;
-        color: black;
+}
+
+.signUpBtn:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablet and smaller screens */
+@media (max-width: 768px) {
+    .signup_card {
+        width: 80%;  /* Card width is increased for smaller screens */
+        padding: 10px 15px;
+    }
+
+    .signUp_title {
+        font-size: 28px;  /* Slightly smaller font size */
+    }
+
+    .signUp_Inputs_inp {
+        width: 80%;  /* Inputs take more width on smaller screens */
+    }
+
+    .image_upload_signup {
+        flex-direction: column;  /* Stack the image upload section */
+        gap: 10px;
+    }
+
+    .image_upload_signup_div {
+        width: 80px;
+        height: 80px;
+    }
+
+    .signUpBtns {
+        flex-direction: column;  /* Stack buttons vertically */
+        gap: 15px;
+    }
+
+    .signUpBtn {
+        width: 100%;  /* Full width for buttons on smaller screens */
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+    .signup_card {
+        width: 90%;  /* Card width takes almost the whole screen */
+        padding: 8px 12px;
+    }
+
+    .signUp_title {
+        font-size: 24px;  /* Further reduce font size for mobile */
+    }
+
+    .signUp_Inputs_inp {
+        width: 90%;  /* Inputs take full width */
+    }
+
+    .image_upload_signup {
+        gap: 5px;
+        justify-content: center;
+    }
+
+    .image_upload_signup_div {
+        width: 70px;
+        height: 70px;
+    }
+
+    .signUpBtns {
+        flex-direction: column;  /* Stack buttons vertically */
+        gap: 10px;
+    }
+
+    .signUpBtn {
+        width: 100%;  /* Full width for buttons */
+    }
+}
+
+/* Large desktop screens */
+@media (min-width: 1200px) {
+    .signup_card {
+        width: 35%;  /* Keep card width smaller on larger screens */
+    }
+
+    .signUp_title {
+        font-size: 36px;  /* Larger font size for larger screens */
+    }
+
+    .signUp_Inputs_inp {
+        width: 70%;  /* Inputs take more space on larger screens */
     }
 }

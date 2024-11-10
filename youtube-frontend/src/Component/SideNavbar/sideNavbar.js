@@ -11,14 +11,20 @@ import SmartDisplayOutlinedIcon from '@mui/icons-material/SmartDisplayOutlined';
 import WatchLaterOutlinedIcon from '@mui/icons-material/WatchLaterOutlined';
 import ThumbUpAltOutlinedIcon from '@mui/icons-material/ThumbUpAltOutlined';
 import ContentCutIcon from '@mui/icons-material/ContentCut';
-const SideNavbar = ({sideNavbar}) => {
+import { Link, useNavigate } from 'react-router-dom';
+const SideNavbar = ({ sideNavbar }) => {
     return (
-        <div className={sideNavbar?"home-sideNavbar":"homeSideNavbarHide"}>
+        <div className={sideNavbar ? "home-sideNavbar" : "homeSideNavbarHide"}>
             <div className="home_sideNavbarTop">
-                <div className={`home_sideNavbarTopOption`} >
+                {/* <div className={`home_sideNavbarTopOption`} >
                     <HomeIcon />
                     <div className="home_sideNavbarTopOptionTitle" >Home</div>
-                </div>
+                </div> */}
+
+                <Link to="/" className="home_sideNavbarTopOption home_link">
+                    <HomeIcon style={{ color: 'white' }} />
+                    <div className="home_sideNavbarTopOptionTitle" style={{ color: 'white' }}>Home</div>
+                </Link>
 
                 <div className={`home_sideNavbarTopOption`} >
                     <VideocamIcon />

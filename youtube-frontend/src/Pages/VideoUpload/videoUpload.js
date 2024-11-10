@@ -50,7 +50,7 @@ const VideoUpload = () => {
          console.log(inputField)
         const handleSubmitFunc = async()=>{
             setLoader(true)
-            await axios.post('http://localhost:4000/api/video',inputField,{withCredentials:true}).then((resp)=>{
+            await axios.post(`http://localhost:4000/api/video`,inputField,{withCredentials:true}).then((resp)=>{
                 console.log(resp.data)
                 setInputField(false)
                 navigate('/')

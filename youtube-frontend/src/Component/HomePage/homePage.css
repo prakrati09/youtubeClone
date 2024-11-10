@@ -1,18 +1,14 @@
-.fullHomePage {
+/* General Styling */
+.fullHomePage,
+.homePage {
     display: flex;
     flex-direction: column;
-    
     flex: 1;
     min-height: 100vh;
 }
 
 .homePage {
-    display: flex;
-    flex-direction: column;
-    
-    flex: 1;
     margin-left: 274px;
-    min-height: 100vh;
 }
 
 .homePage_options {
@@ -21,17 +17,16 @@
     top: 56px;
     z-index: 1;
     width: 100%;
-    box-sizing: border-box;
     gap: 10px;
     flex-shrink: 0;
     height: auto;
-    overflow-x: scroll;
+    overflow-x: auto;
     background-color: black;
-
+    padding: 10px;
 }
 
 .homePage_options::-webkit-scrollbar {
-    width: 12px;
+    width: 8px;
 }
 
 .homePage_option {
@@ -46,79 +41,82 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    white-space: nowrap;
 }
 
-
-.home_mainPage {
+.home_mainPage,
+.home_mainPageWithoutLink {
     display: grid;
-    background-color: black;
-    box-sizing: border-box;
     gap: 10px;
-    grid-template-columns: 384px 384px 384px;
-    padding: 90px 0 20px 0;
-    height: 100vh;
-}
-
-.home_mainPageWithoutLink{
-    display: grid;
-    box-sizing: border-box;
-    gap: 30px;
-    grid-template-columns: 326px 326px 326px 326px;
-    padding: 90px 0 20px 10px;
+    padding: 90px 10px 20px;
     background-color: black;
+    box-sizing: border-box;
     height: 100vh;
 }
 
-.youtube_Video{
+/* Responsive Grid Layout */
+.home_mainPage {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.home_mainPageWithoutLink {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+/* Video Card Styling */
+.youtube_Video {
     color: white;
     text-decoration: none;
     display: flex;
-    box-sizing: border-box;
     flex-direction: column;
     cursor: pointer;
     height: 316px;
+    box-sizing: border-box;
 }
-.youtube_thumbnailBox{
+
+.youtube_thumbnailBox {
     width: 100%;
     position: relative;
-    box-sizing: border-box;
     height: 216px;
-
+    box-sizing: border-box;
 }
-.youtube_thumbnailPic{
+
+.youtube_thumbnailPic {
     width: 100%;
     height: 100%;
     border-radius: 10px;
-
+    object-fit: cover;
 }
-.youtube_timingThumbnail{
+
+.youtube_timingThumbnail {
     position: absolute;
-    bottom: 0;
-    right: 0;
-    width: auto;
-    padding: 1px 2px;
-    background-color: rgb(42, 42, 42);
+    bottom: 5px;
+    right: 5px;
+    padding: 2px 5px;
+    background-color: rgba(42, 42, 42, 0.8);
     border-radius: 5px;
+    font-size: 12px;
 }
 
-.youtubeTitleBox{
+.youtubeTitleBox {
     display: flex;
     padding-top: 10px;
 }
-.youtubeTitleBoxProfile{
-    width: 50px;
-    height: 50px;
+
+.youtubeTitleBoxProfile {
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.youtube_thumbnail_Profile{
-    width: 80%;
-    
+
+.youtube_thumbnail_Profile {
+    width: 100%;
     border-radius: 100%;
 }
 
-.youtubeTitleBox_Title{
+.youtubeTitleBox_Title {
     width: 100%;
     padding: 5px;
     box-sizing: border-box;
@@ -126,16 +124,76 @@
     flex-direction: column;
 }
 
-.youtube_videoTitle{
+.youtube_videoTitle {
     font-weight: 600;
     font-size: 16px;
 }
-.youtube_channelName{
-    margin-top: 5px;
-    font-size: 18px;
-    color: rgb(170,170,170);
-}
-.youtubeVideo_views{
+
+.youtube_channelName,
+.youtubeVideo_views {
     font-size: 14px;
-    color: rgb(170,170,170);
+    color: rgb(170, 170, 170);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .homePage {
+        margin-left: 0;
+    }
+
+    .home_mainPage,
+    .home_mainPageWithoutLink {
+        padding: 70px 10px 20px;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        height: 100vh;
+    }
+
+    .youtube_Video {
+        height: auto;
+    }
+
+    .youtube_thumbnailBox {
+        height: 160px;
+    }
+
+    .youtube_videoTitle {
+        font-size: 14px;
+    }
+
+    .youtube_channelName,
+    .youtubeVideo_views {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .homePage_options {
+        padding: 5px;
+        gap: 5px;
+    }
+
+    .homePage_option {
+        font-size: 12px;
+        padding: 2px 5px;
+    }
+
+    .home_mainPage,
+    .home_mainPageWithoutLink {
+        padding: 60px 5px 20px;
+        grid-template-columns: 1fr;
+        height: 100vh;
+    }
+
+    .youtube_thumbnailBox {
+        height: 140px;
+    }
+
+    .youtube_videoTitle {
+        font-size: 12px;
+    }
+
+    .youtube_channelName,
+    .youtubeVideo_views {
+        font-size: 10px;
+    }
 }

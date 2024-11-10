@@ -1,4 +1,4 @@
-.videoUpload{
+.videoUpload {
     padding-top: 56px;
     width: 100%;
     display: flex;
@@ -12,29 +12,32 @@
     background-color: black;
     color: white;
 }
-.uploadBox{
+
+.uploadBox {
     width: 45%;
     border-radius: 5px;
     margin-top: 20px;
     box-shadow: 0.5px 0.5px 8px white;
     padding: 25px;
 }
-.uploadVideoTitle{
+
+.uploadVideoTitle {
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
     font-size: 28px;
 }
-.uploadForm{
+
+.uploadForm {
     display: flex;
     flex-direction: column;
     gap: 30px;
     margin-top: 30px;
     align-items: center;
-
 }
-.uploadFormInputs{
+
+.uploadFormInputs {
     width: 70%;
     height: 45px;
     padding: 0 20px;
@@ -46,13 +49,14 @@
     border-radius: 5px;
 }
 
-.uploadBtns{
+.uploadBtns {
     display: flex;
     gap: 30px;
     justify-content: center;
     margin-top: 30px;
 }
-.uploadBtn-form{
+
+.uploadBtn-form {
     padding: 10px 20px;
     border: 1px solid;
     font-weight: 500;
@@ -61,8 +65,108 @@
     cursor: pointer;
     color: white;
     text-decoration: none;
-    &:hover{
-        background-color: white;
-        color: black;
+}
+
+.uploadBtn-form:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+    .uploadBox {
+        width: 60%;
+    }
+
+    .uploadVideoTitle {
+        font-size: 24px;
+    }
+
+    .uploadFormInputs {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .videoUpload {
+        height: auto;
+        padding-top: 20px;
+    }
+
+    .uploadBox {
+        width: 80%;
+        padding: 20px;
+    }
+
+    .uploadVideoTitle {
+        font-size: 22px;
+    }
+
+    .uploadForm {
+        gap: 20px;
+    }
+
+    .uploadFormInputs {
+        width: 90%;
+    }
+
+    .uploadBtns {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .uploadBtn-form {
+        width: 100%;
+        padding: 12px 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .videoUpload {
+        height: auto;
+        padding-top: 15px;
+    }
+
+    .uploadBox {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .uploadVideoTitle {
+        font-size: 20px;
+    }
+
+    .uploadForm {
+        gap: 15px;
+    }
+
+    .uploadFormInputs {
+        width: 100%;
+    }
+
+    .uploadBtns {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .uploadBtn-form {
+        width: 100%;
+        padding: 12px 20px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .uploadVideoTitle {
+        font-size: 18px;
+    }
+
+    .uploadFormInputs {
+        width: 100%;
+        height: 40px;
+    }
+
+    .uploadBtn-form {
+        font-size: 16px;
+        padding: 10px 15px;
     }
 }
